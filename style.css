@@ -58,8 +58,7 @@ p {
     border-radius: 15px;
     max-width: 80%;
     min-height: 60%;
-    max-height: 80%;
-    overflow: scroll;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .card-item {
@@ -108,7 +107,7 @@ p {
 
 @media only screen and (min-width: 1100px) { 
     .card {
-        max-width: 35rem;
+        max-width: 40rem;
     }
 
     .card-heading {
