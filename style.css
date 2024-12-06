@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Work Sans;
+    src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Work Sans;
+    background-color: var(--light-pink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-pattern {
+    position: fixed;
+    height: 30%;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(assets/images/background-pattern-mobile.svg);
+}
+
+.show-paragraph {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    font-size: 16px;
+    color: var(--grayish-purple);
+}
+
+.card {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 80%;
+    min-height: 60%;
+    max-height: 80%;
+    overflow: scroll;
+}
+
+.card-item {
+    border-bottom: 1px solid grey;
+    padding: 1rem;
+}
+
+.card-item:last-child {
+    border: none;
+}
+
+.card-item p {
+    line-height: 1.7rem;
+    padding: 1rem 0 1rem 0;
+}
+
+.drop-down-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+.drop-down-container h4 {
+    color: var(--dark-purple);
+}
+
+.drop-down-container i {
+    font-size: 2.5rem;
+    color: purple;
+}
+
+
+.card-heading h1 {
+    display: flex;
+    align-items: center;
+    color: var(--dark-purple);
+}
+
+.card-heading i {
+    color: blueviolet;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+@media only screen and (min-width: 1100px) { 
+    .card {
+        max-width: 35rem;
+    }
+
+    .card-heading {
+        font-size: 2rem;
+    }
+
+    .background-pattern {
+        background-image: url(assets/images/background-pattern-desktop.svg);
+    }
+
+}
